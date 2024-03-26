@@ -1,0 +1,21 @@
+@startuml
+
+state "Задача" as Task
+state "Человек" as Person
+state "Планирование" as Planning
+state "Выбор задачи" as Backlog
+state "Попытка выполнения" as TryAction
+[*] -> Person: Создать человека
+[*] -> Task: Создать задачу
+Person -> Planning: Назначить задачи
+Task -> Task: Создать задачу
+Task -> Planning: Запланировать задачу
+Planning -> Task: Создать задачу
+Planning -> Planning: Запланировать задачу
+Planning -> Backlog: Начать выполнение
+Backlog -> TryAction: Поставить на выполнение
+TryAction -> TryAction: Неудача
+TryAction -> Backlog: Удача
+
+
+@enduml

@@ -1,0 +1,37 @@
+digraph fsm {
+    fontname="Helvetica,Arial,sans-serif"
+	node [fontname="Helvetica,Arial,sans-serif"]
+	edge [fontname="Helvetica,Arial,sans-serif"]
+    rankdir=LR;
+    Start [label=" ", shape=circle, style=filled, fillcolor=black, fontcolor=white, width=0.1, height=0.1];
+    Person [label="Человек"]
+    Task [label="Задача"]
+    Backlog [label = "Выбор задачи"]
+    Planning [label="Планирование"]
+    TryAction [label="Попытка выполнения"]
+    Finish [label=" ", shape =doublecircle, style=filled, fillcolor=black, fontcolor=white, width=0.1, height=0.1]
+
+
+    Start -> Person  [style = circle, label="Создать человека"];
+    Start->Task [label="Создать задачу"]
+    Task->Task [label="Создать задачу"]
+    Task->Planning [label="Запланировать задачу"]
+    Planning->Task [label="Создать задачу"]
+    Planning->Person [label="Создать человека"]
+    Person->Person [label="Создать человека"]
+    Person->Planning [label="Назначить задачи"]
+    Planning->Planning  [label="Запланировать задачу"]
+    Planning->Backlog [label="Начать выполнение задач"]
+    Backlog->TryAction [label = "Поставить на выполнение"]
+    TryAction->Backlog [label="Сдаться"]
+    TryAction [label="Попытка выполнения"]
+    TryAction -> TryAction [label="Неудача"]
+    TryAction-> Backlog [label="Удача"]
+    Backlog->Planning [label="Задачи закончились"]
+    Backlog->Planning [label="Сигнал завершить работу"]
+    Backlog->Planning [label="Прерван/Ошибка"]
+    TryAction->Planning [label="Прерван/Ошибка"]
+    Planning->Finish [label="Завершить выполнение"]
+
+
+}

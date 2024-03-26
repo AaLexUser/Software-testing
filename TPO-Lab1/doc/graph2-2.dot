@@ -1,0 +1,14 @@
+digraph graph1 {
+    rankdir=TB;
+    size="8,5"
+    node [shape = circle];
+    labelloc="t"
+    label= "Graph 2.2"
+    6 -> 2 [arrowhead=none];
+    6 -> 1 [color = red, label = 1];
+    6 -> 4 [color = red, label = 6];
+    1 -> 0 [color = red, label = 2];
+    1 -> 5 [color = red, label = 3];
+    5 -> 3 [color = red, label = 5];
+    5 -> 2 [color = red, label = 4];
+}

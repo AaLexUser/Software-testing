@@ -1,0 +1,4 @@
+INPUT,OUTPUT
+src/test/resources/graph1-in.txt,src/test/resources/graph1-out.txt
+src/test/resources/graph2-in.txt,src/test/resources/graph2-out.txt
+src/test/resources/graph2-2-in.txt,src/test/resources/graph2-2-out.txt
