@@ -1,0 +1,33 @@
+@startuml 
+skinparam linetype ortho
+skinparam packageStyle rectangle
+title "Test coverage diagram"
+class MyFunction
+together {
+    class Sine
+    class Cosine
+    class Tangent
+    class Sectant 
+    class Cosecant
+}
+together {
+    class Logarithm
+    class NaturalLogarithm
+}
+MyFunction -> Tangent
+MyFunction --> Sectant
+MyFunction --> Cosecant
+MyFunction --> Sine
+Cosecant --> Sine
+Sectant --> Cosine
+Cosine --> Sine
+Tangent --> Cosine
+Tangent --> Sine
+
+
+MyFunction --> Logarithm
+MyFunction --> NaturalLogarithm
+Logarithm --> NaturalLogarithm
+
+
+@enduml
