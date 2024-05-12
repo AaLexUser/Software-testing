@@ -49,9 +49,6 @@ public class Sine extends AbstractFunction {
             prevTerm = term;
             term *= value * (value / (2 * i * (2 * i + 1)));
         }
-//        BigDecimal bd = new BigDecimal(Double.toString(result));
-//        bd = bd.setScale((int) -Math.log10(eps), RoundingMode.HALF_UP);
-//        return bd.doubleValue();
         return result;
     }
 }

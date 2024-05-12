@@ -16,8 +16,7 @@ import static org.hamcrest.Matchers.closeTo;
 
 import java.io.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.hamcrest.MockitoHamcrest.argThat;
 import static ru.ifmo.logarithms.LogBase.LOG_BASE_3;
@@ -377,7 +376,7 @@ public class MyFunctionTest {
         }
         catch (IOException e) {
             System.err.println("IOException: \n" + e.getMessage());
-            assertFalse(true);
+            fail();
         }
     }
 
@@ -393,7 +392,7 @@ public class MyFunctionTest {
         }
         catch (IOException e) {
             System.err.println("IOException: \n" + e.getMessage());
-            assertFalse(true);
+            fail();
         }
     }
 
@@ -409,7 +408,7 @@ public class MyFunctionTest {
         }
         catch (IOException e) {
             System.err.println("IOException: \n" + e.getMessage());
-            assertFalse(true);
+            fail();
         }
     }
 
@@ -425,7 +424,7 @@ public class MyFunctionTest {
         }
         catch (IOException e) {
             System.err.println("IOException: \n" + e.getMessage());
-            assertFalse(true);
+            fail();
         }
     }
 

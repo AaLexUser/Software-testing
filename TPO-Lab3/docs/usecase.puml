@@ -1,0 +1,51 @@
+@startuml usecase
+left to right direction
+skinparam packageStyle rectangle
+title "Use Case Diagram"
+actor User
+actor Guest
+rectangle "Ucoz.ru" as App {
+  usecase "Регистрация" as SignUp
+  usecase "Войти" as Login
+  usecase "Посмотреть мои сайты" as MySites
+  usecase "View Blog" as ViewBlog
+  usecase "View Forum" as ViewForum
+  usecase "View Examples" as ViewExamples
+  usecase "View Tour" as ViewTour
+  usecase "View Pricing" as ViewPricing
+  usecase "View Jobs" as ViewJobs
+  usecase "View Help" as ViewHelp
+  usecase "View Contact" as ViewContact
+  usecase "Search Registered Users" as SearchRegisteredUsers
+  usecase "Add User" as AddUser
+
+
+  Guest -- SignUp
+  Guest -left- Login
+  User -- ViewBlog
+  Guest -- ViewBlog
+  User -- ViewForum
+  Guest -- ViewForum
+  User -- ViewExamples
+  Guest -- ViewExamples
+  User -- ViewTour
+  Guest -- ViewTour
+  User -- ViewPricing
+  Guest -- ViewPricing
+  User -- ViewJobs
+  Guest -- ViewJobs
+  User -- ViewHelp
+  Guest -- ViewHelp
+  User -- ViewContact
+  Guest -- ViewContact 
+
+  SignUp ..> Login : include
+  User -left- Login
+  User -- SignUp
+  MySites .up.> Login : include 
+  MySites .down.> SearchRegisteredUsers : extend
+  MySites .down.> AddUser : extend
+
+
+}
+@enduml
