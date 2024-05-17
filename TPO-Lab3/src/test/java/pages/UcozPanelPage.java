@@ -95,7 +95,6 @@ public class UcozPanelPage extends Page {
                 "Генерал-лейтенант", "Генерал-полковник", "Генералиссимус"};
 
         Random random = new Random();
-        // generate random username
 
         String username = UsernameGenerator.generateUsername(4 + random.nextInt(10));
         String password = SecurePasswordGenerator.generatePassword(4 + random.nextInt(10));

@@ -27,7 +27,7 @@ public class UcozLoginPage extends Page {
     public UcozCreatesitePage authentificate(String email, String password) {
         inputEmail.sendKeys(email);
         inputPassword.sendKeys(password);
-        buttonSubmitLogin.click();
+        saveOpenExpectUrl(buttonSubmitLogin, PageUrl.CREATESITE);
         return new UcozCreatesitePage(driver);
     }
     

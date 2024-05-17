@@ -4,8 +4,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.PageUrl;
 
 // page_url = https://www.ucoz.ru/
@@ -64,12 +62,12 @@ public class UcozPage extends Page {
     }
 
     public void clickTourButton() {
-        saveClick(tourButton);
+        saveOpenExpectUrlInNewTab(tourButton, PageUrl.TOUR);
 
     }
 
     public void clickBlogButton() {
-        saveClick(blogButton);
+        saveOpenExpectUrlInNewTab(blogButton, PageUrl.BLOG);
     }
 
     public void clickForumButton() {
@@ -77,11 +75,11 @@ public class UcozPage extends Page {
     }
 
     public void clickPricingButton() {
-        saveClick(pricingButton);
+        saveOpenExpectUrlInNewTab(pricingButton, PageUrl.PRICING);
     }
 
     public void clickJobsButton() {
-        saveClick(jobsButton);
+        saveOpenExpectUrlInNewTab(jobsButton, PageUrl.JOBS);
     }
 
     public void clickExamplesButton() {
